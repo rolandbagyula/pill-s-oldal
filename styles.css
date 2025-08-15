@@ -611,38 +611,83 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        z-index: 1001;
     }
     
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 0;
         flex-direction: column;
         background-color: white;
         width: 100%;
+        height: 100vh;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         box-shadow: var(--shadow-medium);
-        padding: 2rem 0;
+        padding: 100px 0 2rem;
+        z-index: 1000;
+        justify-content: flex-start;
+        gap: 1.5rem;
     }
     
     .nav-menu.active {
         left: 0;
     }
     
+    .nav-menu li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .cta-btn {
+        margin: 1rem 2rem;
+        display: inline-block;
+        width: auto;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
+        padding: 0 1rem;
     }
     
     .hero-content h1 {
         font-size: 2.5rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
     }
     
     .hero-buttons {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
     
     .image-placeholder {
@@ -668,6 +713,7 @@ body {
     .booking-form {
         padding: 2rem 1.5rem;
         margin: 0 1rem;
+        border-radius: 15px;
     }
     
     .booking-container {
@@ -675,43 +721,107 @@ body {
         padding: 0 1rem;
     }
     
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
     .form-group input,
     .form-group select,
     .form-group textarea {
-        padding: 0.8rem;
+        padding: 1rem;
         font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .services {
+        padding: 60px 0;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .gallery {
+        padding: 60px 0;
     }
     
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 0 1rem;
     }
     
     .before-after {
         grid-template-columns: 1fr 1fr;
+        gap: 0;
     }
     
     .before .image-placeholder, .after .image-placeholder {
-        height: 150px;
+        height: 180px;
         font-size: 1.2rem;
     }
     
     .before .image-placeholder::before, .after .image-placeholder::before {
         font-size: 1.5rem;
     }
+    
+    .about {
+        padding: 60px 0;
+    }
+    
+    .contact {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+    
+    .hero {
+        padding: 90px 0 50px;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
     }
     
     .section-header h2 {
         font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .booking-form {
@@ -724,29 +834,47 @@ body {
     }
     
     .container {
-        padding: 0 15px;
+        padding: 0 1rem;
     }
     
     .form-group {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
     
     .form-group input,
     .form-group select,
     .form-group textarea {
-        padding: 0.75rem;
+        padding: 0.9rem;
         font-size: 16px;
+        border-radius: 6px;
     }
     
     .form-group label {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         margin-bottom: 0.4rem;
     }
     
     .booking-form .btn-primary {
-        padding: 1rem;
+        padding: 1.1rem;
         font-size: 1rem;
         margin-top: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+    }
+    
+    .price {
+        font-size: 1.1rem;
     }
     
     .before-after {
@@ -755,7 +883,7 @@ body {
     }
     
     .before .image-placeholder, .after .image-placeholder {
-        height: 120px;
+        height: 140px;
         font-size: 1rem;
     }
     
@@ -768,7 +896,53 @@ body {
     }
     
     .gallery-info p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .about-text h2 {
+        font-size: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+    }
+    
+    .credential {
+        gap: 0.8rem;
+    }
+    
+    .credential span {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-item h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+    
+    .social-links h3 {
+        font-size: 1.3rem;
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .image-placeholder {
+        width: 250px !important;
+        height: 250px !important;
     }
 }
 
@@ -803,6 +977,41 @@ html {
 .form-group input:valid,
 .form-group select:valid {
     border-color: #38a169;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .booking-form {
+        padding: 1.2rem 0.8rem;
+        margin: 0 0.3rem;
+    }
+    
+    .service-card {
+        padding: 1.2rem 0.8rem;
+        margin: 0 0.3rem;
+    }
+    
+    .container {
+        padding: 0 0.8rem;
+    }
+    
+    .nav-container {
+        padding: 0 0.8rem;
+    }
+    
+    .image-placeholder {
+        width: 220px !important;
+        height: 220px !important;
+    }
 }
 
 /* Additional Visual Consistency Improvements */
