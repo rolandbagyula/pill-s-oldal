@@ -19,7 +19,7 @@ Professzionális műszempilla építés és szempilla hosszabbítás szolgáltat
 ### 📱 Funkcionális Elemek
 - **Interaktív navigáció** - Smooth scroll és hamburger menü
 - **Időpont foglalás** - Teljes körű foglalási form validációval
-- **Galéria** - Előtte/utána képek showcase
+- **3D körkarusszel (desktop) + mobil slider** - Placeholder ikonokkal, automata és manuális forgással
 - **Kapcsolat** - Elérhetőségek és social media linkek
 
 ## 🛠️ Technológiák
@@ -70,6 +70,40 @@ pillás/
 - **Rólam** - Szakmai háttér és referenciák
 - **Kapcsolat** - Elérhetőségek és nyitvatartás
 - **Időpont foglalás** - Online foglalási rendszer
+
+### 🎠 3D Kör Karusszel (Galéria)
+
+- **Elhelyezkedés:** `index.html` > `#galleryCarousel .carousel-ring`
+- **Asztali nézet:** 3D kör alakú karusszel, finom automata forgással. Hoverkor megáll, nyilakkal léptethető.
+- **Mobil nézet:** vízszintes görgethető slider, scroll snap-pel; a nyilak elrejtve.
+
+#### Elem hozzáadása
+Az alábbi blokkot szúrd be a `div.carousel-ring` alá. A címkét a `data-title` adja (hoverkor megjelenik):
+
+```html
+<div data-title="Új munka" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+  <i class="fas fa-eye text-pink-500 text-3xl"></i>
+  <!-- Font Awesome ikon cserélhető: fas fa-... -->
+  <!-- Színek cserélhetők: from-... to-... , ikon text-... -->
+  <!-- Méret: w-48 h-48 módosítható (pl. w-40 h-40, w-52 h-52) -->
+</div>
+```
+
+#### Vezérlés és viselkedés
+- Automata forgás: folyamatos lassú rotáció asztali nézetben.
+- Kézi vezérlés: `#carouselPrev` és `#carouselNext` gombokkal egy „lépésnyit” forgat.
+- Hover pause: egérrel fölé húzva megáll az automata forgás, elvéve újraindul.
+- Reszponzív: ablakméret változásnál újraszámolja a kör sugarát és az elrendezést.
+
+#### Testreszabás (távolság, sugár)
+`script.js` fájlban a 3D kör sugara dinamikusan számolódik. A vizuális „szellősség” növeléséhez van egy plusz érték:
+
+```js
+// script.js
+const RADIUS_BOOST = 60; // px – növeld/csökkentsd a távolságot a körön
+```
+
+Szükség esetén a placeholder elemek méretét (pl. `w-48 h-48`) is igazítsd; a rendszer ehhez is alkalmazkodik.
 
 ### Időpont Foglalás
 1. Töltsd ki a kötelező mezőket (név, telefon, szolgáltatás, dátum, idő)
