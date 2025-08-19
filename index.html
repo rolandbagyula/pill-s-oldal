@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Műszempilla Építés - Professzionális Szempilla Hosszabbítás</title>
     <meta name="description" content="Professzionális műszempilla építés és szempilla hosszabbítás szolgáltatások. Foglalj időpontot még ma!">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -100,74 +101,48 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header">
-                <h2>Munkáim</h2>
-                <p>Tekintse meg korábbi eredményeinket</p>
+                <h2 class="text-4xl font-semibold">Munkáim</h2>
+                <p class="text-gray-500">Tekintse meg korábbi eredményeinket</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="before-after">
-                        <div class="before">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Előtte</span>
+
+            <!-- 3D Kör Galéria (desktop) + Slider (mobil) -->
+            <div class="relative">
+                <!-- Controls -->
+                <button id="carouselPrev" class="carousel-btn hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-lg ring-1 ring-gray-200 transition">
+                    <i class="fas fa-chevron-left text-gray-700"></i>
+                </button>
+                <button id="carouselNext" class="carousel-btn hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-lg ring-1 ring-gray-200 transition">
+                    <i class="fas fa-chevron-right text-gray-700"></i>
+                </button>
+
+                <!-- Ring wrapper -->
+                <div id="galleryCarousel" class="carousel-3d mx-auto md:h-[640px] md:w-full flex items-center justify-center">
+                    <div class="carousel-ring md:relative md:w-[640px] md:h-[640px]">
+                        <!--
+                          Bővíthetőség: adj hozzá egy ÚJ placeholder elemet egyszerűen egy új
+                          <div class="carousel-media ..."><i class="fas fa-..."></i></div>
+                          beszúrásával az alábbi listába. A data-title attribútum adja a munkanév címkét (hoverkor jelenik meg).
+                        -->
+                        <div data-title="Classic" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+                            <i class="fas fa-magic text-pink-500 text-3xl"></i>
                         </div>
-                        <div class="after">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Utána</span>
+                        <div data-title="Volume 4D" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+                            <i class="fas fa-star text-purple-500 text-3xl"></i>
                         </div>
-                    </div>
-                    <div class="gallery-info">
-                        <h4>Klasszikus Építés</h4>
-                        <p>Természetes megjelenés</p>
+                        <div data-title="Mega Volume" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+                            <i class="fas fa-gem text-rose-500 text-3xl"></i>
+                        </div>
+                        <div data-title="Alkalmi szett" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+                            <i class="fas fa-heart text-pink-500 text-3xl"></i>
+                        </div>
+                        <div data-title="Feltöltés" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
+                            <i class="fas fa-redo text-purple-500 text-3xl"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="before-after">
-                        <div class="before">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Előtte</span>
-                        </div>
-                        <div class="after">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Utána</span>
-                        </div>
-                    </div>
-                    <div class="gallery-info">
-                        <h4>Volume Technika</h4>
-                        <p>Dúsabb megjelenés</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="before-after">
-                        <div class="before">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Előtte</span>
-                        </div>
-                        <div class="after">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Utána</span>
-                        </div>
-                    </div>
-                    <div class="gallery-info">
-                        <h4>Mega Volume</h4>
-                        <p>Glamour megjelenés</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="before-after">
-                        <div class="before">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Előtte</span>
-                        </div>
-                        <div class="after">
-                            <div class="image-placeholder"></div>
-                            <span class="label">Utána</span>
-                        </div>
-                    </div>
-                    <div class="gallery-info">
-                        <h4>Feltöltés</h4>
-                        <p>Frissített megjelenés</p>
-                    </div>
-                </div>
+
+                <!-- Mobile slider hint (only visible on small screens) -->
+                <div class="md:hidden mt-3 text-center text-sm text-gray-500">Görgess vízszintesen a képek között</div>
             </div>
         </div>
     </section>

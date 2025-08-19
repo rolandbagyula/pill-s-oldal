@@ -298,3 +298,92 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// 3D Carousel Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const ringWrapper = document.getElementById('galleryCarousel');
+    if (!ringWrapper) return;
+    const ring = ringWrapper.querySelector('.carousel-ring');
+    const items = Array.from(ring.querySelectorAll('.carousel-media'));
+    const btnPrev = document.getElementById('carouselPrev');
+    const btnNext = document.getElementById('carouselNext');
+
+    let currentRotation = 0;
+    let angleStep = 360 / Math.max(items.length, 1);
+    let radius = 200; // default, recalculated below
+    const RADIUS_BOOST = 60; // px, increases spacing on the ring
+    let autoplayTimer = null;
+
+    function isMobile() {
+        return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    function computeRadius() {
+        const ringRect = ring.getBoundingClientRect();
+        const size = Math.min(ringRect.width || 520, ringRect.height || 520);
+        const itemRect = items[0] ? items[0].getBoundingClientRect() : { width: 160 };
+        // Base radius plus a small boost to reduce visual crowding
+        radius = Math.max(100, size / 2 - itemRect.width / 2 - 10 + RADIUS_BOOST);
+    }
+
+    function arrange3D() {
+        angleStep = 360 / Math.max(items.length, 1);
+        computeRadius();
+        items.forEach((el, i) => {
+            const angle = i * angleStep;
+            el.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${radius}px)`;
+        });
+        ring.style.transform = `rotateY(${currentRotation}deg)`;
+    }
+
+    function clearTransforms() {
+        items.forEach((el) => {
+            el.style.transform = '';
+        });
+        ring.style.transform = '';
+    }
+
+    function applyLayout() {
+        if (isMobile()) {
+            clearTransforms();
+            stopAutoplay();
+        } else {
+            arrange3D();
+            startAutoplay();
+        }
+    }
+
+    function rotateBy(delta) {
+        currentRotation += delta;
+        ring.style.transform = `rotateY(${currentRotation}deg)`;
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        // Slow, smooth rotation
+        autoplayTimer = setInterval(() => rotateBy(0.4), 60); // ~6 deg/sec
+    }
+
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+
+    // Controls
+    if (btnPrev) btnPrev.addEventListener('click', () => rotateBy(-angleStep));
+    if (btnNext) btnNext.addEventListener('click', () => rotateBy(angleStep));
+
+    // Pause on hover (desktop only)
+    ringWrapper.addEventListener('mouseenter', () => { if (!isMobile()) stopAutoplay(); });
+    ringWrapper.addEventListener('mouseleave', () => { if (!isMobile()) startAutoplay(); });
+
+    // Recalculate on resize
+    window.addEventListener('resize', () => {
+        applyLayout();
+    });
+
+    // Initial
+    applyLayout();
+});
