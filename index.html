@@ -1,307 +1,280 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Műszempilla Építés - Professzionális Szempilla Hosszabbítás</title>
-    <meta name="description" content="Professzionális műszempilla építés és szempilla hosszabbítás szolgáltatások. Foglalj időpontot még ma!">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PillArt Studio – Műszempilla stúdió</title>
+  <meta name="description" content="Modern, elegáns műszempilla stúdió. Klasszikus, volume és hybrid szettek, prémium minőség, profi szakértelem. Foglalj időpontot online!" />
+  <meta name="keywords" content="műszempilla, klasszikus, volume, hybrid, beauty, szépségszalon, szempilla hosszabbítás" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-eye"></i>
-                <span>BeautyLash</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Főoldal</a></li>
-                <li><a href="#services">Szolgáltatások</a></li>
-                <li><a href="#gallery">Galéria</a></li>
-                <li><a href="#about">Rólam</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
-                <li><a href="#booking" class="cta-btn">Időpont foglalás</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  <!-- Header / Nav -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="PillArt Studio kezdőlap">PillArt<span>Studio</span></a>
+      <nav class="nav-menu" aria-label="Fő navigáció">
+        <a href="#szolgaltatasok">Szolgáltatások</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#rolam">Rólam</a>
+        <a href="#velemenyek">Vélemények</a>
+        <a href="#arak">Árak</a>
+        <a href="#kapcsolat" class="btn btn-primary">Foglalás</a>
+      </nav>
+      <button class="hamburger" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Bevezető szekció">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Természetes szépség, eleganciával</h1>
+        <p>Prémium műszempilla szettek, személyre szabva – klasszikus, volume és hybrid technikákkal.</p>
+        <div class="hero-ctas">
+          <a href="#kapcsolat" class="btn btn-primary">Foglalj időpontot</a>
+          <a href="#szolgaltatasok" class="btn btn-secondary">Szolgáltatások</a>
         </div>
-    </nav>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop" alt="Elegáns pillaszett közelről" loading="eager" width="1200" height="1400" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Professzionális<br><span class="highlight">Műszempilla Építés</span></h1>
-                <p>Varázslatos tekintet, természetes szépség. Tapasztalt szakemberként biztosítom számodra a tökéletes szempilla hosszabbítást, amely kiemeli természetes szépségedet.</p>
-                <div class="hero-buttons">
-                    <a href="#booking" class="btn-primary">Időpont foglalás</a>
-                    <a href="#services" class="btn-secondary">Szolgáltatások</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-eye fa-5x"></i>
-                </div>
-            </div>
+  <!-- Services -->
+  <section id="szolgaltatasok" class="section services" aria-labelledby="szolgaltatasok-cim">
+    <div class="container">
+      <h2 id="szolgaltatasok-cim" class="section-title">Szolgáltatások</h2>
+      <p class="section-sub">Válaszd ki az egyéniségedhez illő stílust</p>
+      <div class="cards-3">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-feather"></i></div>
+          <h3>Klasszikus</h3>
+          <p>Természetes hatású szempillák, finom kiemelés mindennapi eleganciával.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-fan"></i></div>
+          <h3>Volume</h3>
+          <p>Látványos, dús hatás – több szál egy pillára a tökéletes glamourért.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-sparkles"></i></div>
+          <h3>Hybrid</h3>
+          <p>A természetes és a dús hatás harmóniája egy kiegyensúlyozott megjelenésért.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Slider with Lightbox -->
+  <section id="galeria" class="section gallery" aria-labelledby="galeria-cim">
+    <div class="container">
+      <h2 id="galeria-cim" class="section-title">Galéria</h2>
+      <p class="section-sub">Valós munkáink, inspirációk</p>
+
+      <div class="slideshow" id="gallerySlideshow" aria-label="Képgaléria slider">
+        <button class="slide-btn prev" aria-label="Előző kép"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slide-btn next" aria-label="Következő kép"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slides">
+          <figure class="slide active">
+            <img src="https://unsplash.com/photos/sOfnsglYWa0/download?force=true&w=1200"
+                 srcset="https://unsplash.com/photos/sOfnsglYWa0/download?force=true&w=600 600w, https://unsplash.com/photos/sOfnsglYWa0/download?force=true&w=900 900w, https://unsplash.com/photos/sOfnsglYWa0/download?force=true&w=1200 1200w, https://unsplash.com/photos/sOfnsglYWa0/download?force=true&w=1800 1800w"
+                 sizes="(max-width: 640px) 92vw, (max-width: 1024px) 800px, 1100px"
+                 alt="Szalonhangulat – hajvágás pillanat" loading="lazy" width="1200" height="800" />
+            <figcaption>Szalonhangulat</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="https://unsplash.com/photos/I3y-aJ4DWng/download?force=true&w=1200"
+                 srcset="https://unsplash.com/photos/I3y-aJ4DWng/download?force=true&w=600 600w, https://unsplash.com/photos/I3y-aJ4DWng/download?force=true&w=900 900w, https://unsplash.com/photos/I3y-aJ4DWng/download?force=true&w=1200 1200w, https://unsplash.com/photos/I3y-aJ4DWng/download?force=true&w=1800 1800w"
+                 sizes="(max-width: 640px) 92vw, (max-width: 1024px) 800px, 1100px"
+                 alt="Sminkelés ecsettel – természetes megjelenés" loading="lazy" width="1200" height="800" />
+            <figcaption>Sminkelés ecsettel</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="https://unsplash.com/photos/gliBuD0SVUE/download?force=true&w=1200"
+                 srcset="https://unsplash.com/photos/gliBuD0SVUE/download?force=true&w=600 600w, https://unsplash.com/photos/gliBuD0SVUE/download?force=true&w=900 900w, https://unsplash.com/photos/gliBuD0SVUE/download?force=true&w=1200 1200w, https://unsplash.com/photos/gliBuD0SVUE/download?force=true&w=1800 1800w"
+                 sizes="(max-width: 640px) 92vw, (max-width: 1024px) 800px, 1100px"
+                 alt="Portré – fekete top, letisztult stílus" loading="lazy" width="1200" height="800" />
+            <figcaption>Portré</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="szempilla%20hosszab%C3%ADt%C3%A1s.jpg" alt="Szempilla hosszabbítás – kezelési folyamat közelről" loading="lazy" />
+            <figcaption>Szempilla hosszabbítás</figcaption>
+          </figure>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Szolgáltatásaink</h2>
-                <p>Professzionális műszempilla szolgáltatások minden igényre</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Klasszikus Építés</h3>
-                    <p>Természetes megjelenés, egy műszempilla egy természetes szempillára.</p>
-                    <div class="price">15.000 Ft-tól</div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Volume Technika</h3>
-                    <p>Dúsabb, látványosabb eredmény több vékony szempilla alkalmazásával.</p>
-                    <div class="price">18.000 Ft-tól</div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Mega Volume</h3>
-                    <p>Extrém dús, glamour megjelenés különleges alkalmakra.</p>
-                    <div class="price">22.000 Ft-tól</div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-redo"></i>
-                    </div>
-                    <h3>Feltöltés</h3>
-                    <p>2-3 hetente ajánlott karbantartás a tökéletes megjelenésért.</p>
-                    <div class="price">8.000 Ft-tól</div>
-                </div>
-            </div>
+        <div class="slide-dots" aria-label="Diapontok" role="tablist">
+          <button class="dot active" aria-label="1. dia" role="tab"></button>
+          <button class="dot" aria-label="2. dia" role="tab"></button>
+          <button class="dot" aria-label="3. dia" role="tab"></button>
+          <button class="dot" aria-label="4. dia" role="tab"></button>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="text-4xl font-semibold">Munkáim</h2>
-                <p class="text-gray-500">Tekintse meg korábbi eredményeinket</p>
-            </div>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Nagyított kép">
+      <div class="lightbox-backdrop" data-close></div>
+      <figure class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Nagyított galéria kép" />
+        <figcaption id="lightbox-cap"></figcaption>
+        <button class="lightbox-close" aria-label="Bezárás" data-close><i class="fa-solid fa-xmark"></i></button>
+      </figure>
+    </div>
+  </section>
 
-            <!-- 3D Kör Galéria (desktop) + Slider (mobil) -->
-            <div class="relative">
-                <!-- Controls -->
-                <button id="carouselPrev" class="carousel-btn hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-lg ring-1 ring-gray-200 transition">
-                    <i class="fas fa-chevron-left text-gray-700"></i>
-                </button>
-                <button id="carouselNext" class="carousel-btn hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-lg ring-1 ring-gray-200 transition">
-                    <i class="fas fa-chevron-right text-gray-700"></i>
-                </button>
+  <!-- About -->
+  <section id="rolam" class="section about" aria-labelledby="rolam-cim">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop" alt="Stúdió hangulat, elegáns környezet" loading="lazy" width="1200" height="1400" />
+      </div>
+      <div class="about-text">
+        <h2 id="rolam-cim" class="section-title">Rólam</h2>
+        <p>Üdvözöllek a PillArt Studio-ban! Több éves tapasztalattal, minőségi anyagokkal és precíz munkával hozom ki belőled a legszebb, mégis természetes hatást.</p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-check"></i> Prémium anyagok és higiénia</li>
+          <li><i class="fa-solid fa-check"></i> Személyre szabott stílustanácsadás</li>
+          <li><i class="fa-solid fa-check"></i> Kényelmes, nyugodt környezet</li>
+        </ul>
+        <a href="#kapcsolat" class="btn btn-primary">Foglalj időpontot</a>
+      </div>
+    </div>
+  </section>
 
-                <!-- Ring wrapper -->
-                <div id="galleryCarousel" class="carousel-3d mx-auto md:h-[640px] md:w-full flex items-center justify-center">
-                    <div class="carousel-ring md:relative md:w-[640px] md:h-[640px]">
-                        <!--
-                          Bővíthetőség: adj hozzá egy ÚJ placeholder elemet egyszerűen egy új
-                          <div class="carousel-media ..."><i class="fas fa-..."></i></div>
-                          beszúrásával az alábbi listába. A data-title attribútum adja a munkanév címkét (hoverkor jelenik meg).
-                        -->
-                        <div data-title="Classic" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
-                            <i class="fas fa-magic text-pink-500 text-3xl"></i>
-                        </div>
-                        <div data-title="Volume 4D" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
-                            <i class="fas fa-star text-purple-500 text-3xl"></i>
-                        </div>
-                        <div data-title="Mega Volume" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
-                            <i class="fas fa-gem text-rose-500 text-3xl"></i>
-                        </div>
-                        <div data-title="Alkalmi szett" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
-                            <i class="fas fa-heart text-pink-500 text-3xl"></i>
-                        </div>
-                        <div data-title="Feltöltés" class="carousel-media rounded-full ring-4 ring-pink-200 shadow-xl w-48 h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center transition-transform duration-300 ease-out md:hover:scale-110">
-                            <i class="fas fa-redo text-purple-500 text-3xl"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile slider hint (only visible on small screens) -->
-                <div class="md:hidden mt-3 text-center text-sm text-gray-500">Görgess vízszintesen a képek között</div>
-            </div>
+  <!-- Testimonials -->
+  <section id="velemenyek" class="section testimonials" aria-labelledby="velemenyek-cim">
+    <div class="container">
+      <h2 id="velemenyek-cim" class="section-title">Vélemények</h2>
+      <p class="section-sub">Vendégeink mondták</p>
+      <div class="testi-slider" id="testiSlider" aria-label="Vélemények slider">
+        <div class="testi-track">
+          <blockquote class="testi active">
+            <p>„Gyönyörű, tartós pillák, és szuper kedvesség! Mindenkinek ajánlom.”</p>
+            <footer>— Anna</footer>
+          </blockquote>
+          <blockquote class="testi">
+            <p>„Profi munka, kényelmes környezet, imádom az új szettem!”</p>
+            <footer>— Réka</footer>
+          </blockquote>
+          <blockquote class="testi">
+            <p>„Pont olyan lett, amilyet szerettem volna – természetes és elegáns.”</p>
+            <footer>— Dóri</footer>
+          </blockquote>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Rólam</h2>
-                    <p>Üdvözlöm! Több mint 5 éve foglalkozom professzionálisan műszempilla építéssel. Számomra a szépség nem csak egy szakma, hanem szenvedély.</p>
-                    <p>Folyamatosan képzem magam a legújabb technikákban, hogy ügyfeleimnek mindig a legjobb minőségű szolgáltatást nyújthassam. Minden egyes munka során a természetes szépség kiemelésére törekszem.</p>
-                    <div class="credentials">
-                        <div class="credential">
-                            <i class="fas fa-certificate"></i>
-                            <span>Nemzetközi Oklevél</span>
-                        </div>
-                        <div class="credential">
-                            <i class="fas fa-award"></i>
-                            <span>5+ Év Tapasztalat</span>
-                        </div>
-                        <div class="credential">
-                            <i class="fas fa-heart"></i>
-                            <span>500+ Elégedett Ügyfél</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user fa-3x"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="testi-dots" role="tablist">
+          <button class="tdot active" role="tab" aria-label="1. vélemény"></button>
+          <button class="tdot" role="tab" aria-label="2. vélemény"></button>
+          <button class="tdot" role="tab" aria-label="3. vélemény"></button>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Booking Section -->
-    <section id="booking" class="booking">
-        <div class="container">
-            <div class="section-header">
-                <h2>Időpont Foglalás</h2>
-                <p>Foglalj időpontot kényelmesen online</p>
-            </div>
-            <div class="booking-container">
-                <form class="booking-form" id="bookingForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Név *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefonszám *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email cím</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Szolgáltatás *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Válassz szolgáltatást</option>
-                                <option value="classic">Klasszikus Építés</option>
-                                <option value="volume">Volume Technika</option>
-                                <option value="mega-volume">Mega Volume</option>
-                                <option value="refill">Feltöltés</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="date">Dátum *</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time">Időpont *</label>
-                            <select id="time" name="time" required>
-                                <option value="">Válassz időpontot</option>
-                                <option value="09:00">09:00</option>
-                                <option value="10:30">10:30</option>
-                                <option value="12:00">12:00</option>
-                                <option value="13:30">13:30</option>
-                                <option value="15:00">15:00</option>
-                                <option value="16:30">16:30</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Üzenet</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Kérlek írd le, ha van valamilyen speciális kérésed vagy allergiád..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Időpont Foglalása</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <!-- Pricing -->
+  <section id="arak" class="section pricing" aria-labelledby="arak-cim">
+    <div class="container">
+      <h2 id="arak-cim" class="section-title">Árak</h2>
+      <p class="section-sub">Átlátható csomagok, rejtett költségek nélkül</p>
+      <div class="cards-3">
+        <article class="price-card">
+          <h3>Klasszikus</h3>
+          <p class="price">16 990 Ft</p>
+          <ul>
+            <li>Természetes hatás</li>
+            <li>90–120 perc</li>
+            <li>2 hét garancia</li>
+          </ul>
+          <a href="#kapcsolat" class="btn btn-outline">Foglalás</a>
+        </article>
+        <article class="price-card highlight">
+          <h3>Volume</h3>
+          <p class="price">21 990 Ft</p>
+          <ul>
+            <li>Dús, látványos hatás</li>
+            <li>120–150 perc</li>
+            <li>2 hét garancia</li>
+          </ul>
+          <a href="#kapcsolat" class="btn btn-primary">Foglalás</a>
+        </article>
+        <article class="price-card">
+          <h3>Hybrid</h3>
+          <p class="price">19 990 Ft</p>
+          <ul>
+            <li>Kiegyensúlyozott megjelenés</li>
+            <li>105–135 perc</li>
+            <li>2 hét garancia</li>
+          </ul>
+          <a href="#kapcsolat" class="btn btn-outline">Foglalás</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Kapcsolat</h2>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Cím</h4>
-                            <p>1234 Budapest, Példa utca 12.</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefon</h4>
-                            <p>+36 30 123 4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@beautylash.hu</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Nyitvatartás</h4>
-                            <p>Hétfő - Péntek: 9:00 - 18:00<br>Szombat: 9:00 - 15:00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <h3>Kövess minket</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="kapcsolat" class="section contact" aria-labelledby="kapcsolat-cim">
+    <div class="container contact-grid">
+      <div>
+        <h2 id="kapcsolat-cim" class="section-title">Kapcsolat & Foglalás</h2>
+        <form id="bookingForm" class="form" novalidate>
+          <div class="grid-2">
+            <label> Név
+              <input type="text" name="name" placeholder="Vezetéknév Keresztnév" required />
+            </label>
+            <label> Telefon
+              <input type="tel" name="phone" placeholder="06 30 123 4567" required />
+            </label>
+          </div>
+          <label> E-mail
+            <input type="email" name="email" placeholder="te@pelda.hu" required />
+          </label>
+          <div class="grid-2">
+            <label> Szolgáltatás
+              <select name="service" required>
+                <option value="" selected disabled>Válassz...</option>
+                <option value="classic">Klasszikus</option>
+                <option value="volume">Volume</option>
+                <option value="hybrid">Hybrid</option>
+              </select>
+            </label>
+            <label> Dátum
+              <input type="date" name="date" required />
+            </label>
+          </div>
+          <label> Üzenet
+            <textarea name="message" rows="4" placeholder="Kérdések, megjegyzések..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Időpont kérése</button>
+        </form>
+      </div>
+      <div class="map-wrap">
+        <iframe title="PillArt Studio térkép" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.510!2d19.040235!3d47.497913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBudapest!5e0!3m2!1shu!2shu!4v1610000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-eye"></i>
-                    <span>BeautyLash</span>
-                </div>
-                <p>&copy; 2024 BeautyLash. Minden jog fenntartva.</p>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo">PillArt<span>Studio</span></a>
+        <p class="muted">Profi műszempilla stúdió – minőség, elegancia, természetesség.</p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <div class="legal">© <span id="year"></span> PillArt Studio · Minden jog fenntartva</div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
